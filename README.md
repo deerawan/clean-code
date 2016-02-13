@@ -1,6 +1,8 @@
 # Clean Code
 
-## Boolean Assignments
+## Conditionals
+
+### Boolean Assignments
 ```javascript
 // Dirty
 var buyIceCream;
@@ -15,7 +17,7 @@ if (money > 5) {
 var buyIceCream = money > 5;
 ```
 
-## Ternary
+### Ternary
 ```javascript
 // Dirty
 var transportCost;
@@ -30,7 +32,7 @@ if (isStudent) {
 var transportCost = isStudent? 5 : 10;
 ```
 
-## Positive Conditional
+### Positive Conditional
 ```javascript
 // Dirty
 if (!isNotStudent) ...
@@ -41,8 +43,7 @@ if (isStudent) ...
 if (loggedIn) ...
 ```
 
-## String Conditional
-Awesome for language that supports Enum
+### String Conditional
 ```javascript
 // Dirty
 if (profession == 'teacher')
@@ -51,16 +52,32 @@ if (profession == 'teacher')
 if (profession == ProfessionType.teacher)
 ```
 
-## Magic Numbers
+### Magic Numbers
 ```javascript
 // Dirty
-if (status === 2) ...
+if (status == 2) ...
+
+// Dirty
 if (score > 70) ...
 
 // Clean
-const PUBLISH = 2;
-if (status === PUBLISH) ...
+var status = {
+  active: 2
+};
+if (status == status.active) ...
 
+// Clean
 const MIN_SCORE_TO_PASS = 70;
-if (score > MIN_SCORE_TO_PASS
+if (score > MIN_SCORE_TO_PASS) ...
+```
+
+### Complex Conditionals
+```javascript
+// Dirty
+if (employee.age > 55 && employee.yearsEmployed > 10) ...
+
+// Clean
+var eligibleForPension = employee.age > minRetirementAge &&
+    employee.yearsEmployed > minPensionEmploymentYears;
+if (eligibleForPension) ...
 ```
