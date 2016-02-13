@@ -50,3 +50,17 @@ if (profession == 'teacher')
 // Clean
 if (profession == ProfessionType.teacher)
 ```
+
+## Magic Numbers
+```javascript
+// Dirty
+if (status === 2) ...
+if (score > 70) ...
+
+// Clean
+const PUBLISH = 2;
+if (status === PUBLISH) ...
+
+const MIN_SCORE_TO_PASS = 70;
+if (score > MIN_SCORE_TO_PASS
+```
