@@ -29,3 +29,24 @@ if (isStudent) {
 // Clean
 var transportCost = isStudent? 5 : 10;
 ```
+
+## Positive Conditional
+```javascript
+// Dirty
+if (!isNotStudent) ...
+if (!isNotLoggedIn) ...
+
+// Clean
+if (isStudent) ...
+if (loggedIn) ...
+```
+
+## String Conditional
+Awesome for language that supports Enum
+```javascript
+// Dirty
+if (profession == 'teacher')
+
+// Clean
+if (profession == ProfessionType.teacher)
+```
