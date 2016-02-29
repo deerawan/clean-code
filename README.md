@@ -85,6 +85,7 @@ if (eligibleForPension) ...
 ## Comments
 
 ### Avoid Redundant Comments
+You can omit this type of comment because they are not necessary
 ```javascript
 // Dirty
 var gender = 'male'; // set gender to male
@@ -94,6 +95,24 @@ var student = new Student(); // instantiate a new student
  * Count tax
  */
 function countTax() {
+}
+
+// Clean
+var gender = 'male';
+var student = new Student();
+```
+
+### Avoid Intent Comments
+You can change this comment with enum
+```javascript
+// Dirty
+
+// if employee is manager
+if (employee === 2) {
+}
+
+// Clean
+if (employee === employeeType.manager) {
 }
 ```
 
