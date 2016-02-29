@@ -81,3 +81,19 @@ var eligibleForPension = employee.age > minRetirementAge &&
     employee.yearsEmployed > minPensionEmploymentYears;
 if (eligibleForPension) ...
 ```
+
+## Comments
+
+### Avoid Redundant Comments
+```javascript
+// Dirty
+var gender = 'male'; // set gender to male
+var student = new Student(); // instantiate a new student
+
+/**
+ * Count tax
+ */
+function countTax() {
+}
+```
+
